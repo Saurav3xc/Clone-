@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+*{
+  margin:0px;
+  padding:0px;
+  font-family: 'poppins',sans-serif;
+}
+.flex{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.container{
+  width:100%;
+  min-height:100vh;
+  flex-direction:column;
+}
+
+.main{
+  width:95%;
+  height:auto;
+  flex-direction:column;
+
+}
+.tab{
+  width:90%;
+  height:60px;
+  justify-content:space-between;
+  padding:10px 15px;
+
+}
+.tab-btn{
+  padding:10px 15px;
+  background:#8085BB;
+  color:white;
+  border:none;
+  outline:none;
+  border-radius:5px;
+}
+.tab-btn.active{
+  background: #5D64B9;
+}
+.tab-box{
+  width:90%;
+  height:auto;
+  margin-top:20px;
+  flex-direction:column;
+  gap:40px
+}
+
+
+.content{
+  width:95%;
+  min-height:250px;
+  background:whitesmoke;
+  flex-direction:column;
+  padding:10px 10px;
+  color:black;
+  display:none;
+  animation:move 0.3s 1 ease-in-out;
+  border-radius:10px;
+}
+.content h1::first-letter{
+  color:red;
+  font-size:40px;
+}
+@keyframes move{
+  from{
+    transform:translatex(50px);
+    opacity:0;
+  }
+  to{
+    transform:translatex(0px);
+    opacity:1;
+  }
+}
+.content.active{
+  display:block;
+}
+.content h1{
+  align-self:flex-start;
+}
+.ad p{
+  font-weight:550;
+  margin-top:20px;
+}
+.ad button {
+  background:black;
+  padding:10px 20px;
+  outline:none;
+  border:none;
+  margin-top:5%;
+  border-radius:6px;
+}
+
+.ad a{
+  color:white;
+  text-decoration: none;
+}
+@media only screen and (min-width:650px){
+  .main{
+    width:85%
+  }
+  
+  .tab{
+    width:85%;
+  }
+  
+  .tab-btn{
+    padding:10px 25px;
+    font-size:30px;
+  }
+  .content h1{
+    font-size:55px;
+  }
+  .content h1::first-letter{
+    font-size:70px;
+  }
+  .content p{
+    font-size:24px;
+  }
+}
